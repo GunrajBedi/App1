@@ -9,18 +9,28 @@
     <div>Content goes here!</div>
     <script>
 
-        function createCircle(radius) {
-            return {
-                radius,
-                draw: function () {
-                    console.log('draw');
+        //function createCircle(radius) {
+        //    return {
+        //        radius,
+        //        draw: function () {
+        //            console.log('draw');
 
-                }
-            };
+        //        }
+        //    };
+        //}
+        //const circle = createCircle(1);
+        //circle.draw();
+
+        //constructor function
+        function Circle(radius) {
+            console.log('this', this);
+            this.radius = radius;
+            this.draw = function() {
+                console.log('Draw circle with radius');
+
+            }
         }
-        const circle = createCircle(1);
-        circle.draw();
-
+        const another = new Circle(1);
 
     </script>
 </body>
